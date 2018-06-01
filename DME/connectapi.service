@@ -1,0 +1,13 @@
+[Unit]
+Description=Script das Seriel Alarmdaten von einem DME empfängt und via API an Connect weiterleitet
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/home/pi/connectapi/connectapi.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
