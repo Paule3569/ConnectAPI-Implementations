@@ -1,0 +1,13 @@
+[Unit]
+Description=Script das FMS Status Daten von FMS32Pro empfängt uind an  Conect weiterleitet
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/home/pi/fms32status/fms32status.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
