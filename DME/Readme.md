@@ -11,6 +11,13 @@ Besonderheit in dieser umsetzung ist es, das für jedes RIC ein eigener Token ge
 
 Das Script läuft auf einem RaspberryPi 3 mit Raspian Stretch. (Andere Konfigurationen erfordern evtl. kleinere Änderungen)
 
+Erst mal die notwendigen Pakete installieren
+```
+sudo apt-get install python3
+sudo pip install requests pyserial coloredlogs
+```
+
+Nun das Script installieren
 ```
 mkdir ~/connectapi
 cd ~/connectapi
