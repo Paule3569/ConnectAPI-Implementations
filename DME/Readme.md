@@ -6,3 +6,30 @@ Besonderheit in dieser umsetzung ist es, das für jedes RIC ein eigener Token ge
 
 - Thread: [Link](https://feuersoftware.com/forum/index.php?thread/2596-ansteuerung-der-schnittstelle-aus-textdatei/)
 - Erklärung des Aufbaus durch paule3569: [Link](https://feuersoftware.com/forum/index.php?thread/2596-ansteuerung-der-schnittstelle-aus-textdatei/&postID=17141#post17141)
+
+# Setup
+
+Das Script läuft auf einem RaspberryPi 3 mit Raspian Stretch. (Andere Konfigurationen erfordern evtl. kleinere Änderungen)
+
+```
+mkdir ~/connectapi
+cd ~/connectapi
+wget https://raw.githubusercontent.com/Bouni/ConnectAPI/master/DME/connectapi.py
+```
+Die Tokens müssen in Dateien im Verzeichnis ~/connectapi liegen und dem Namensschema token_<ric> folgen, also z.B. token_01A 
+
+Um das ganze als systemd Service laufen zu lassen, wie folgt vorgehen:
+
+```
+cd /etc/systemd/system
+sudo wget https://raw.githubusercontent.com/Bouni/ConnectAPI/master/DME/connectapi.service
+sudo systemctl daemon-reload
+sudo systemctl enable connectapi.service
+sudo systemctl start connectapi.service
+```
+
+Das Script erwartet den Melder an der Seriellen Schnittstelle `/dev/ttyS0`.
+
+# Fehlerdiagnose
+
+Fehlerdiagnose kann mit dem Befehl `journalctl -u connectapi.service -f` gemacht werden, dieser gibt das Logfile aus.
