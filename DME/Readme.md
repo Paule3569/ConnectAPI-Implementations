@@ -16,7 +16,7 @@ mkdir ~/connectapi
 cd ~/connectapi
 wget https://raw.githubusercontent.com/Bouni/ConnectAPI/master/DME/connectapi.py
 ```
-Die Tokens müssen in Dateien im Verzeichnis ~/connectapi liegen und dem Namensschema token_<ric> folgen, also z.B. token_01A 
+Die Tokens müssen in Dateien im Verzeichnis `~/connectapi` liegen und dem Namensschema `token_<ric>` folgen, also z.B. `token_01A`
 
 Um das ganze als systemd Service laufen zu lassen, wie folgt vorgehen:
 
