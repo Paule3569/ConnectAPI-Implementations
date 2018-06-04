@@ -34,8 +34,6 @@ class ConnectAPI:
             print(f"Fehler beim senden des Alarms {r.status_code}, \"{r.text}\"")
 
 
-
-
 class BosMonTCPHandler(socketserver.BaseRequestHandler):
     
     def handle(self):
