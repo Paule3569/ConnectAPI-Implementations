@@ -1,0 +1,13 @@
+[Unit]
+Description=Script das FMS Status Daten von BosMon empfängt und an Connect weiterleitet
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/home/pi/bosmonstatus/bosmonstatus.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
