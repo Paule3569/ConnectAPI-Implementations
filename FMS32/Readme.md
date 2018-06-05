@@ -4,7 +4,7 @@ Dieses Script wird von User **esche888** aus dem [Feuersoftware Forum](https://f
 
 Thread: [Link](https://feuersoftware.com/forum/index.php?thread/2189-wunsch-tetracontrol-schnitstelle-für-fms32-verwenden/)
 
-[FMS32Pro](https://www.heirue-soft.de/software/fms32) ist eine Windows Software, man kann das Python Script entweder auf dem selben Windows rechenr, oder auf einem anderen Linux rechner laufen lassen.
+[FMS32Pro](https://www.heirue-soft.de/software/fms32) ist eine Windows Software, man kann das Python Script entweder auf dem selben Windows Rechner, oder auf einem anderen Linux Rechner laufen lassen.
 
 # Setup unter Windows
 
