@@ -14,7 +14,7 @@ Das Script läuft auf einem RaspberryPi 3 mit Raspian Stretch. (Andere Konfigura
 Erst mal die notwendigen Pakete installieren
 ```
 sudo apt-get install python3
-sudo pip install requests pyserial coloredlogs
+sudo pip3 install requests pyserial coloredlogs
 ```
 
 Nun das Script installieren
@@ -22,6 +22,7 @@ Nun das Script installieren
 mkdir ~/connectapi
 cd ~/connectapi
 wget https://raw.githubusercontent.com/Bouni/ConnectAPI/master/DME/connectapi.py
+sudo chmod +x connectapi.py
 ```
 Die Tokens müssen in Dateien im Verzeichnis `~/connectapi` liegen und dem Namensschema `token_<ric>` folgen, also z.B. `token_01A`
 
@@ -40,3 +41,5 @@ Das Script erwartet den Melder an der Seriellen Schnittstelle `/dev/ttyS0`.
 # Fehlerdiagnose
 
 Fehlerdiagnose kann mit dem Befehl `journalctl -u connectapi.service -f` gemacht werden, dieser gibt das Logfile aus.
+
+Das Script stoppen kann man mit `sudo systemctl stop connectapi.service`, danach kann man es zur besseren Fehlerdiagnose mit `~/connectapi/connectapi.py` ausführen um zu sehen wo es klemmt.
