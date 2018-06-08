@@ -97,8 +97,8 @@ def main():
                             "(?P<nummer>[^\/]*)\/"
                             "(?P<infos>[^\/]*)\/"
                             "(?P<objekt>[^\/]*)\/"
-                            "(?P<sachverhalt>[^\/]*)\/"
-                            "[#\w\d;]+N(?P<latmin>\d{2})(?P<latsec>[^E]*)E(?P<lonmin>\d{2})(?P<lonsec>[^\/]*)\/"
+                            "(?P<sachverhalt>.*)#K01;"
+                            "N(?P<latmin>\d{2})(?P<latsec>[^E]*)E(?P<lonmin>\d{2})(?P<lonsec>[^\/]*)\/"
                             "(?P<alarmzeit>\d{2}:\d{2})"
                             , data)
                     # If Regex Filter was not successfull due to invalid message format for example, print error and continue to wait for next message
