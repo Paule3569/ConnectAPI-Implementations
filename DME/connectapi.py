@@ -97,7 +97,7 @@ def main():
                             "(?P<nummer>[^\/]*)\/"
                             "(?P<infos>[^\/]*)\/"
                             "(?P<objekt>[^\/]*)\/"
-                            "(?P<sachverhalt>.*)#K01;"
+                            "(?P<sachverhalt>.*)\/#K01;"
                             "N(?P<latmin>\d{2})(?P<latsec>[^E]*)E(?P<lonmin>\d{2})(?P<lonsec>[^\/]*)\/"
                             "(?P<alarmzeit>\d{2}:\d{2})"
                             , data)
