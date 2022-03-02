@@ -63,7 +63,7 @@ class ConnectAPI:
     def _send(self):
         if not self.dump:
             r = requests.post(self.url, data=json.dumps(self.body), headers=self.headers)
-            if r.status_code != 200:
+            if r.status_code < 200 and r.status-code >=300:
                 logger.warning("Fehler beim senden des Alarms {r.status_code}, \"{}\"".format(r.text))
             else:
                 logger.info("Alarm erfolgreich gesendet!")
